@@ -89,7 +89,7 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
 
 ### 3.如何通过命令查看线程情况，
 
-### **jsp>jstack**
+#### **jsp>jstack**
 
 ### 4.理解线程的上下文切换。
 
@@ -227,7 +227,9 @@ throws InterruptedException {
 
 ### 6.volatile
 
-### ![vol](https://gitee.com/anqingjieer/pengbo/raw/master/img/20200515205916.png)
+
+
+![vol](https://gitee.com/anqingjieer/pengbo/raw/master/img/20200515205916.png)
 
 - 实现可见性的原理：是保证volatitle修饰的变量，自始至终一直保存在共享变量（主内存）中，工作内存为空，所以只能从主内存取数据
 
@@ -451,8 +453,6 @@ public void set(T value) {
 ### 2线程池的继承关系
 
 ![](https://gitee.com/anqingjieer/pengbo/raw/master/img/20200514225255.png)
-
-### 
 
 ### 3. 线程池执行原理
 
