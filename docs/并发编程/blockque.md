@@ -7,17 +7,7 @@
 - 多线程环境支持，多个线程进行安全访问队列
 - 支持生产和消费等待，多个线程之间相互配合，当队列为空的时候，消费线程会阻塞等待队列不为空；当队列满的时候，生产线程阻塞直到队列不满。
 
-
-
-
-
-Condition
-
-假设缓存队列中已经存满，那么阻塞的肯定是写线程，唤醒的肯定是读线程
-
-相反，阻塞的肯定是读线程，唤醒的肯定是写线程，
-
-假设只有一个Condition会有什么效果呢，缓存队列中已经存满，这个Lock不知道唤醒的是读线程还是写线程了，如果唤醒的是读线程，皆大欢喜，
+## 2.阻塞队列的实现源码
 
 > Condition它更强大的地方在于：能够更加精细的控制多线程的休眠与唤醒。对于同一个锁，我们可以创建多个Condition，在不同的情况下使用不同的Condition。
 
@@ -29,8 +19,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 
 /**
- * Condition的强大之处，假设缓存队列中已经存满，那么阻塞的肯定是写线程，唤醒的肯定是读线程，相反，阻塞的肯定是读线程，唤醒的肯定是写线程，
-	 * 那么假设只有一个Condition会有什么效果呢，缓存队列中已经存满，这个Lock不知道唤醒的是读线程还是写线程了，如果唤醒的是读线程，皆大欢喜，
+ * 阻塞队列的强大之处，假设缓存队列中已经存满，那么阻塞的肯定是写线程，唤醒的肯定是读线程，相反，阻塞的肯定是读线程，唤醒的* 肯定是写线程，
+* 那么假设只有一个Condition会有什么效果呢，缓存队列中已经存满，这个Lock不知道唤醒的是读线程还是写线程了，如果唤醒的是读线* 程，皆大欢喜，
  * 如果唤醒的是写线程，那么线程刚被唤醒，又被阻塞了，这时又去唤醒，这样就浪费了很多时间。
  *
  *
@@ -134,7 +124,7 @@ public class ArrayBlockingQueue<E> {
 
 ```
 
-ArrayBlockingQueue和LinkedBlockingQueue之前的区别
+## 3.ArrayBlockingQueue和LinkedBlockingQueue之前的区别
 
 ArrayBlockingQueue维护的一个ReentrantLock,二LinkedBlockingQueue维护的是两个Reentrantlock
 

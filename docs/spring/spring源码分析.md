@@ -109,8 +109,9 @@ Spring框架提供了以下四种方式来管理Bean的生命周期事件：
 
 ## 13.spring框架中的单例bean是线程安全的吗？
 
-​        spring框架并没有对单例bean进行任何多线程的封装处理。关于单例Bean的线程安全和并发问题需要开发者自行搞定。但实际上，大部分Spring Bean并没有可变的状态（比如Serview类和DAO类），所以在某种程度上说，Spring的单例Bean是线程安全的。如果你的Bean有多种状态（比如View Model对象），就需要自行保证线程安全。
-最浅显的解决办法就是将多态Bean的作用域由“singleton”变更为“prototype”。
+​        spring框架并没有对单例bean进行任何多线程的封装处理。关于单例Bean的线程安全和并发问题需要开发者自行搞定。
+
+​			但实际上，大部分Spring Bean并没有可变的状态（比如Serview类和DAO类），所以在某种程度上说，Spring的单例Bean是线程安全的。如果你的Bean有多种状态（比如View Model对象），就需要自行保证线程安全。最浅显的解决办法就是将多态Bean的作用域由“singleton”变更为“prototype”。
 
 **Spring容器中的Bean本身不具备线程安全的特性**
 
@@ -134,7 +135,7 @@ Spring框架提供了以下四种方式来管理Bean的生命周期事件：
 
 不同点：
 
-@Autowired默认是按照类型装配的（这个注解是属于spring的），默认情况下必须要求依赖的对象必须存在，如果允许为null，可以设置它的required的属性为false，如@Autowired(required=false)
+@Autowired默认是按照**类型**装配的（这个注解是属于spring的），默认情况下必须要求**依赖的对象必须存在**，如果允许为null，可以设置它的required的属性为false，如@Autowired(required=false)
 
 
 
