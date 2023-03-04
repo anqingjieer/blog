@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-03-04T03:21:54.509Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" etag="oQUvYJftS2gf50jW_a-D" version="21.0.2" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-03-04T03:30:01.778Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" etag="oGe943aMRbz_yz2zxOhp" version="21.0.2" type="github" pages="2">
   <diagram name="第 1 页" id="xpgsP24Q8yST1N1dYpLn">
     <mxGraphModel dx="1829" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
       <root>
@@ -327,7 +327,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="LYRumfAs5K8UenKALBHm" name="派车单开始">
-    <mxGraphModel dx="1427" dy="776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
+    <mxGraphModel dx="1724" dy="938" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -347,7 +347,7 @@
           <mxGeometry x="496.5573770491804" y="149.99658536585366" width="113.60655737704919" height="44.390243902439025" as="geometry" />
         </mxCell>
         <mxCell id="33YMb6wi-cXJhNgrvR-L-25" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="320.983606557377" y="469.9960975609756" width="485.40983606557376" height="464.76" as="geometry" />
+          <mxGeometry x="320.983606557377" y="469.9960975609756" width="485.40983606557376" height="480.0039024390244" as="geometry" />
         </mxCell>
         <mxCell id="33YMb6wi-cXJhNgrvR-L-4" value="百度接口修改状态" style="html=1;whiteSpace=wrap;labelBackgroundColor=none;" vertex="1" parent="33YMb6wi-cXJhNgrvR-L-25">
           <mxGeometry x="175.57377049180326" width="113.60655737704919" height="44.390243902439025" as="geometry" />
@@ -394,6 +394,12 @@
           <mxGeometry y="314.94292682926834" width="113.60655737704919" height="33.29268292682927" as="geometry" />
         </mxCell>
         <mxCell id="33YMb6wi-cXJhNgrvR-L-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;" edge="1" parent="33YMb6wi-cXJhNgrvR-L-25" source="33YMb6wi-cXJhNgrvR-L-11" target="33YMb6wi-cXJhNgrvR-L-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33YMb6wi-cXJhNgrvR-L-53" value="只保存基本数据到redis" style="html=1;whiteSpace=wrap;labelBackgroundColor=none;" vertex="1" parent="33YMb6wi-cXJhNgrvR-L-25">
+          <mxGeometry x="175.57377049180326" y="410.00439024390255" width="113.60655737704919" height="44.390243902439025" as="geometry" />
+        </mxCell>
+        <mxCell id="33YMb6wi-cXJhNgrvR-L-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="33YMb6wi-cXJhNgrvR-L-25" source="33YMb6wi-cXJhNgrvR-L-11" target="33YMb6wi-cXJhNgrvR-L-53">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="33YMb6wi-cXJhNgrvR-L-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33YMb6wi-cXJhNgrvR-L-26" target="33YMb6wi-cXJhNgrvR-L-30">
@@ -475,8 +481,11 @@
         <mxCell id="33YMb6wi-cXJhNgrvR-L-19" value="流程结束" style="html=1;whiteSpace=wrap;labelBackgroundColor=none;" vertex="1" parent="1">
           <mxGeometry x="496.5573770491803" y="999.9958536585366" width="113.60655737704919" height="44.390243902439025" as="geometry" />
         </mxCell>
-        <mxCell id="33YMb6wi-cXJhNgrvR-L-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;" edge="1" parent="1" source="33YMb6wi-cXJhNgrvR-L-11" target="33YMb6wi-cXJhNgrvR-L-19">
+        <mxCell id="33YMb6wi-cXJhNgrvR-L-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33YMb6wi-cXJhNgrvR-L-53" target="33YMb6wi-cXJhNgrvR-L-19">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33YMb6wi-cXJhNgrvR-L-57" value="&lt;h1&gt;redis数据格式&lt;/h1&gt;&lt;p&gt;KEY:&amp;nbsp; &amp;nbsp;dispatch:car:运车单id&lt;/p&gt;&lt;p&gt;VALUE:&amp;nbsp; [dispath,........,..........] （数组形式）&lt;/p&gt;&lt;p&gt;KEY:&amp;nbsp; &amp;nbsp;dispatch:car:decatil&lt;/p&gt;&lt;p&gt;VALUE: MAP(运车单、大单详情)&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1740" y="350" width="260" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
